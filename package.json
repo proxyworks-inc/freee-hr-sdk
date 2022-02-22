@@ -1,0 +1,32 @@
+{
+  "name": "@proxyworks-inc/freee-hr-sdk",
+  "version": "0.0.1",
+  "description": "freee人事労務 Open API",
+  "main": "dist/typescript-axios/index.js",
+  "scripts": {
+    "build": "npm run gen:typescript-axios && tsc",
+    "gen:typescript-axios": "openapi-generator-cli generate -g typescript-axios -i ./openapi.json -o ./src",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proxyworks-inc/freee-hr-sdk"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": "Proxyworks, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/proxyworks-inc/freee-hr-sdk/issues"
+  },
+  "homepage": "https://github.com/proxyworks-inc/freee-hr-sdk#readme",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.4.26",
+    "typescript": "^4.5.5"
+  }
+}
